@@ -1,0 +1,11 @@
+version: '2'
+services:
+  gitlab:
+    image: {{ gitlab_docker_image }}
+    restart: always
+    ports:
+      - 127.0.0.1:{{ gitlab_http_port }}:{% if gitlab_http_scheme == "http"%}80{% else %}443{% endif %}
+      - 0.0.0.0:{{ gitlab_ssh_port }}:22
+    volumes:
+      - ./data:/var/opt/gitlab
+      - ./gitlab.rb:/etc/gitlab/gitlab.rb

@@ -1,0 +1,15 @@
+---
+- name: Create base directory
+  file:
+    path: "{{ gitlab_base_directory }}"
+    state: directory
+
+- name: Configure gitlab
+  template:
+    src: gitlab.rb
+    dest: "{{ gitlab_base_directory }}/gitlab.rb"
+
+- name: Template docker compose file
+  template:
+    src: docker-compose.yml
+    dest: "{{ gitlab_base_directory }}/docker-compose.yml"
