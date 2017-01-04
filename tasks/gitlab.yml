@@ -8,6 +8,8 @@
   template:
     src: gitlab.rb
     dest: "{{ gitlab_base_directory }}/gitlab.rb"
+  notify:
+    - Restart gitlab
 
 - name: Template docker compose file
   template:

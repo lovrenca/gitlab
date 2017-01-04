@@ -4,8 +4,12 @@ services:
     image: {{ gitlab_docker_image }}
     restart: always
     ports:
-      - 127.0.0.1:{{ gitlab_http_port }}:{% if gitlab_http_scheme == "http"%}80{% else %}443{% endif %}
+      - 127.0.0.1:{{ gitlab_http_port }}:{{ gitlab_http_port }}
+      - 127.0.0.1:{{ gitlab_https_port }}:{{ gitlab_https_port }}
       - 0.0.0.0:{{ gitlab_ssh_port }}:{{ gitlab_ssh_port }}
     volumes:
       - ./data:/var/opt/gitlab
       - ./gitlab.rb:/etc/gitlab/gitlab.rb
+{% for volume in gitlab_custom_volumes %}
+      - {{ volume.host }}:{{ volume.container }}
+{% endfor %}

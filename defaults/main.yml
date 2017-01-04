@@ -1,6 +1,6 @@
 ---
 gitlab_docker_image: "gitlab/gitlab-ce"
-gitlab__http_port: 8081
+gitlab_http_port: 8081
 gitlab_http_scheme: "http"
 gitlab_ssh_port: 8082
 gitlab_base_directory: "/opt/gitlab"
@@ -8,3 +8,6 @@ gitlab_external_url: "gitlab.example.com"
 gitlab_mail_from: "gitlab@example.com"
 gitlab_reply_to: "gitlab@example.com"
 gitlab_timezone: "Europe/Ljubljana"
+gitlab_ssl_key : ""
+gitlab_ssl_cert: ""
+gitlab_custom_volumes: ""
