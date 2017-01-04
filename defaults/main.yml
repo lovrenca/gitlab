@@ -4,6 +4,7 @@ gitlab__http_port: 8081
 gitlab_http_scheme: "http"
 gitlab_ssh_port: 8082
 gitlab_base_directory: "/opt/gitlab"
-gitlab_external_url: "git.izzivizzi.net"
-gitlab_mail_from: "gitlab@izzivizzi.net"
-gitlab_reply_to: "gitlab@izzivizzi.net"
+gitlab_external_url: "gitlab.example.com"
+gitlab_mail_from: "gitlab@example.com"
+gitlab_reply_to: "gitlab@example.com"
+gitlab_timezone: "Europe/Ljubljana"

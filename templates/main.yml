@@ -20,7 +20,7 @@ external_url 'https://git.pricepilot.si'
 # gitlab_rails['gitlab_ssh_host'] = 'ssh.host_example.com'
 # gitlab_rails['time_zone'] = 'UTC'
 gitlab_rails['gitlab_email_enabled'] = true
-gitlab_rails['gitlab_email_from'] = 'gitlab@pricepilot.si'                                                                                                                                                                                  
+gitlab_rails['gitlab_email_from'] = 'gitlab@pricepilot.si'
 gitlab_rails['gitlab_email_display_name'] = 'Gitlab'
 gitlab_rails['gitlab_email_reply_to'] = 'gitlab@pricepilot.si'
 # gitlab_rails['gitlab_email_subject_suffix'] = ''

@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - 127.0.0.1:{{ gitlab_http_port }}:{% if gitlab_http_scheme == "http"%}80{% else %}443{% endif %}
-      - 0.0.0.0:{{ gitlab_ssh_port }}:22
+      - 0.0.0.0:{{ gitlab_ssh_port }}:{{ gitlab_ssh_port }}
     volumes:
       - ./data:/var/opt/gitlab
       - ./gitlab.rb:/etc/gitlab/gitlab.rb
