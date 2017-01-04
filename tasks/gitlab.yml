@@ -13,3 +13,5 @@
   template:
     src: docker-compose.yml
     dest: "{{ gitlab_base_directory }}/docker-compose.yml"
+  notify:
+    - Start gitlab

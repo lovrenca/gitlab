@@ -4,3 +4,9 @@
     state: present
     pull: yes
     project_src: "{{ gitlab_base_directory }}"
+
+- name: Restart gitlab
+  docker_service:
+    state: present
+    pull: yes
+    restared: yes
